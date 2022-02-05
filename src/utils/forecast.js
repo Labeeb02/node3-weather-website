@@ -24,7 +24,7 @@ const request = require('request')
             callback('Unable To find Location!')
         }
         else{
-            callback(undefined,body.days[0].description+' It is currently '+body.currentConditions.temp+ ' degrees out. There is a '+ (body.currentConditions.precipprob+0) + '% chance of rain ')
+            callback(undefined,body.days[0].description+' It is currently '+body.currentConditions.temp+ ' degrees out and it feels like '+body.currentConditions.feelslike+'. The sunset timing was '+body.currentConditions.sunset+' with the sunrise timing as '+body.currentConditions.sunrise+'. There is a '+ (body.currentConditions.precipprob+0) + '% chance of rain ')
         }
     } )
  }
